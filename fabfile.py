@@ -12,6 +12,15 @@ plugins = [
     'git://github.com/optilude/SublimeTextIgorPlugin.git',
     # JS Lint
     'git://github.com/eduardolundgren/Sublime-JSLint.git',
+    # Git
+    'git://github.com/kemayo/sublime-text-2-git.git',
+]
+
+packages = [
+    'PdbSublimeTextSupport',
+    'mr.igor',
+    'pep8',
+    'pyflakes',
 ]
 
 def install():
@@ -23,6 +32,7 @@ def install():
         local('sudo pip install pyflakes')
     for plugin_repo in plugins:
         install_plugin(plugin_repo)
+    install_pdb_sublime_text_support()
 
 def install_plugin(plugin_git_repo):
     git_repo_id = plugin_git_repo.split("/")[-1:][0][:-4]
@@ -34,3 +44,12 @@ def install_plugin(plugin_git_repo):
         with lcd(plugins_dir):   
             local('git clone %s' % plugin_git_repo) 
 
+def install_pdb_sublime_text_support():
+    local('sudo pip install PdbSublimeTextSupport') 
+    if not os.path.exists('/usr/local/bin/subl'): 
+        local('sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/local/bin/subl')
+    if not os.path.exists('~/.pdbrc'): 
+        local('cp .pdbrc ~/')
+    if not os.path.exists('/usr/local/bin/subl'):
+        local('cp subl /usr/local/bin/')
+    
