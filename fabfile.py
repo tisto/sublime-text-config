@@ -24,12 +24,12 @@ packages = [
 ]
 
 def install():
-    if not os.path.exists('/usr/local/bin/igor'): 
-        local('sudo pip install mr.igor')
-    if not os.path.exists('/usr/local/bin/pep8'): 
-        local('sudo pip install pep8')
-    if not os.path.exists('/usr/local/bin/pyflakes'):
-        local('sudo pip install pyflakes')
+    #if not os.path.exists('/usr/local/bin/igor'): 
+    #    local('sudo pip install mr.igor')
+    #if not os.path.exists('/usr/local/bin/pep8'): 
+    #    local('sudo pip install pep8')
+    #if not os.path.exists('/usr/local/bin/pyflakes'):
+    #    local('sudo pip install pyflakes')
     for plugin_repo in plugins:
         install_plugin(plugin_repo)
     install_pdb_sublime_text_support()
@@ -45,7 +45,7 @@ def install_plugin(plugin_git_repo):
             local('git clone %s' % plugin_git_repo) 
 
 def install_pdb_sublime_text_support():
-    local('sudo pip install PdbSublimeTextSupport') 
+    #local('sudo pip install PdbSublimeTextSupport') 
     if not os.path.exists('/usr/local/bin/subl'): 
         local('sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/local/bin/subl')
     if not os.path.exists('~/.pdbrc'): 
