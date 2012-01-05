@@ -23,6 +23,7 @@ def install():
     install_sublime_text_plugins()
     install_pdb_sublime_text_support()
     install_python_checkers()
+    install_patterns()
 
 def install_sublime_text_2():
     if not os.path.exists('build'):
@@ -75,3 +76,8 @@ def install_python_checkers():
         local('sudo ln -s %s/bin/pyflakes /usr/local/bin/pyflakes' % install_dir)
     if not os.path.exists('%s/sublimetext_python_checker/local_settings.py' % plugins_dir):
         local('cp templates/local_settings.py %s/sublimetext_python_checker' % plugins_dir)
+
+def install_patterns():
+    local('git clone git://github.com/optilude/SublimeTextMisc.git')
+    local('rsync -avz SublimeTextMisc/Packages/Buildout/ %s/Buildout/' % plugins_dir)
+    local('rsync -avz SublimeTextMisc/Packages/Zope/ %s/Zope' % plugins_dir)
