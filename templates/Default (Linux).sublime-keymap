@@ -1,3 +1,14 @@
 [
-	{ "keys": ["ctrl+shift+t"], "command": "delete_trailing_spaces" }
+
+	{ "keys": ["ctrl+shift+t"], "command": "delete_trailing_spaces" },
+
+    { "keys": ["ctrl+alt+c"], "command": "git_commit"},
+    { "keys": ["ctrl+alt+a"], "command": "git_add"},
+    { "keys": ["ctrl+alt+t"], "command": "git_reset"},
+    { "keys": ["ctrl+alt+r"], "command": "git_rm"},
+    { "keys": ["ctrl+alt+d"], "command": "git_diff"},
+    { "keys": ["ctrl+alt+s"], "command": "git_status"},
+    { "keys": ["ctrl+alt+l"], "command": "git_log"},
+    { "keys": ["ctrl+alt+b"], "command": "git_blame"}
+
 ]
