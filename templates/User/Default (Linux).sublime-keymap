@@ -9,6 +9,10 @@
     { "keys": ["ctrl+shitf+d"], "command": "git_diff"},
     { "keys": ["ctrl+shift+s"], "command": "git_status"},
     { "keys": ["ctrl+shift+l"], "command": "git_log"},
-    { "keys": ["ctrl+shitf+b"], "command": "git_blame"}
+    { "keys": ["ctrl+shift+b"], "command": "git_blame"},
+
+    { "keys": ["ctrl+shift+i"], "command": "igor_replace",
+        "context":[ { "key": "selector", "operator": "equal", "operand": "source.python" } ]
+    }
 
 ]
