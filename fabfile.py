@@ -31,8 +31,9 @@ def install_sublime_text_2():
         local('tar xfvj Sublime\ Text\ 2\ Build\ 2139.tar.bz2')
         local('rm Sublime\ Text\ 2\ Build\ 2139.tar.bz2')
         local('mv Sublime\ Text\ 2 build')
-    if not os.path.exists('/usr/local/bin/sublime_text'):
-        local('sudo ln -s /opt/sublime-text-2/build/sublime_text /usr/local/bin/sublime_text')
+    if os.path.exists('/usr/local/bin/sublime_text'):
+        local('sudo rm /usr/local/bin/sublime_text')
+    local('sudo ln -s /opt/sublime-text-2/build/sublime_text /usr/local/bin/sublime_text')
 
 def install_python_packages():
     if not os.path.exists('bin/igor'):
@@ -66,18 +67,27 @@ def install_pdb_sublime_text_support():
         local('cp subl /usr/local/bin/')
 
 def install_python_checkers():
+    # Pep8
     if not os.path.exists('bin/pep8'):
         local('bin/pip install pep8')
-    if not os.path.exists('/usr/local/bin/pep8'):
-        local('sudo ln -s %s/bin/pep8 /usr/local/bin/pep8' % install_dir)
+    if os.path.exists('/usr/local/bin/pep8'):
+        local('sudo rm /usr/local/bin/pep8')
+    local('sudo ln -s %s/bin/pep8 /usr/local/bin/pep8' % install_dir)
+    # Pyflakes
     if not os.path.exists('bin/pyflakes'):
         local('bin/pip install pyflakes')
-    if not os.path.exists('/usr/local/bin/pyflakes'):
-        local('sudo ln -s %s/bin/pyflakes /usr/local/bin/pyflakes' % install_dir)
-    if not os.path.exists('%s/sublimetext_python_checker/local_settings.py' % plugins_dir):
-        local('cp templates/local_settings.py %s/sublimetext_python_checker' % plugins_dir)
+    if os.path.exists('/usr/local/bin/pyflakes'):
+        local('sudo rm /usr/local/bin/pyflakes')
+    local('sudo ln -s %s/bin/pyflakes /usr/local/bin/pyflakes' % install_dir)
+    if os.path.exists('%s/sublimetext_python_checker/local_settings.py' % plugins_dir):
+        local('rm %s/sublimetext_python_checker/local_settings.py' % plugins_dir)
+    local('cp templates/local_settings.py %s/sublimetext_python_checker' % plugins_dir)
 
 def install_patterns():
-    local('git clone git://github.com/optilude/SublimeTextMisc.git')
+    if os.path.exists('SublimeTextMisc'):
+        with lcd('SublimeTextMisc'):
+            local('git pull')
+    else:
+        local('git clone git://github.com/optilude/SublimeTextMisc.git')
     local('rsync -avz SublimeTextMisc/Packages/Buildout/ %s/Buildout/' % plugins_dir)
     local('rsync -avz SublimeTextMisc/Packages/Zope/ %s/Zope' % plugins_dir)
