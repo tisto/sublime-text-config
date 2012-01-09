@@ -4,11 +4,7 @@
 
     "theme": "Soda Light.sublime-theme",
 
-    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "bin", "develop-eggs", "parts", "var", ".git", "AccessControl", "App", "BTrees", "OFS", "ComputedAttribute", "DateTime", "DocumentTemplate", "ExtensionClass", "Globals", "HelpSys", "Lifetime", "MethodObject", "Missing", "MultiMapping", "MySQLdb", "Persistence", "Record", "RestrictedPython", "Shared", "Signals", "Testing", "TreeDisplay", "ZConfig", "ZEO", "ZODB", "ZPublisher", "ZServer", "ZTUtils", "Zope2", "ZopeUndo", "archetypes", "borg", "dateutil", "docutils", "elementtree", "initgroups", "kss", "manuel", "markdown", "martian", "mechanize", "openid", "persistent", "pythongettext", "pytz", "reStructuredText", "repoze", "setuptools", "sqlalchemy", "tempstorage", "transaction", "unidecode", "unittest2", "webdav", "wicked", "wsgi_intercept", "zExceptions", "zLOG", "zdaemon"],
-    "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", ".installed.cfg", ".mr.developer.cfg"],
-
-    "translate_tabs_to_spaces": true,
-
-    "wrap_width": 80
+    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "*.egg", "*.egg-info", "downloads", "eggs", "bin", "develop-eggs", "parts", "var", ".git", "AccessControl", "App", "BTrees", "OFS", "ComputedAttribute", "DateTime", "DocumentTemplate", "ExtensionClass", "Globals", "HelpSys", "Lifetime", "MethodObject", "Missing", "MultiMapping", "MySQLdb", "Persistence", "Record", "RestrictedPython", "Shared", "Signals", "Testing", "TreeDisplay", "ZConfig", "ZEO", "ZODB", "ZPublisher", "ZServer", "ZTUtils", "Zope2", "ZopeUndo", "archetypes", "borg", "dateutil", "docutils", "elementtree", "initgroups", "kss", "manuel", "markdown", "martian", "mechanize", "openid", "persistent", "pythongettext", "pytz", "reStructuredText", "repoze", "setuptools", "sqlalchemy", "tempstorage", "transaction", "unidecode", "unittest2", "webdav", "wicked", "wsgi_intercept", "zExceptions", "zLOG", "zdaemon"],
+    "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", ".installed.cfg", ".mr.developer.cfg"]
 
 }
