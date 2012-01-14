@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=2.0
+Type=Application
+Terminal=false
+Icon[de]=sublime
+Name[de]=Sublime Text 2
+Exec=/usr/local/bin/sublime_text
+Name=Sublime Text 2
+Icon=sublime
