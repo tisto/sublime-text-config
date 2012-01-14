@@ -4,7 +4,7 @@ from fabric.api import local, lcd
 
 sublime_version = "2165"
 install_dir = '/opt/sublime-text-2'
-plugins_dir = '~/.config/sublime-text-2/Packages/'
+plugins_dir = '~/.config/sublime-text-2/Packages'
 plugins = [
     # Python PEP-8 and PyFlakes Checker
     'git://github.com/vorushin/sublimetext_python_checker.git',
