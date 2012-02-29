@@ -51,7 +51,8 @@ def install_sublime_text_plugins():
 
 def install_plugin(plugin_git_repo):
     git_repo_id = plugin_git_repo.split("/")[-1:][0][:-4]
-    plugin_dir = plugins_dir + git_repo_id
+    plugin_dir = plugins_dir + "/" + git_repo_id
+    print("Install plugin %s into %s" % (git_repo_id, plugin_dir))
     if os.path.exists(os.path.expanduser(plugin_dir)):
         with lcd(plugin_dir):
             local('git pull')
