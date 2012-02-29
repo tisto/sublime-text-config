@@ -2,7 +2,7 @@
 import os
 from fabric.api import local, lcd
 
-sublime_version = "2165"
+sublime_version = "2181"
 install_dir = '/opt/sublime-text-2'
 plugins_dir = '~/.config/sublime-text-2/Packages'
 plugins = [
@@ -29,7 +29,7 @@ def install():
 
 def install_sublime_text_2():
     if not os.path.exists('build'):
-        local('wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202%20Build%202165.tar.bz2')
+        local('wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202%20Build%202181.tar.bz2')
         local('tar xfvj Sublime\ Text\ 2\ Build\ %s.tar.bz2' % sublime_version)
         local('rm Sublime\ Text\ 2\ Build\ %s.tar.bz2' % sublime_version)
         local('mv Sublime\ Text\ 2 build')
