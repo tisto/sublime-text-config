@@ -16,7 +16,10 @@ plugins = [
     'git://github.com/eduardolundgren/Sublime-JSLint.git',
     # Git
     'git://github.com/kemayo/sublime-text-2-git.git',
+    # LESS
+    'git@github.com:tisto/sublime-text-less.git',
 ]
+
 
 def install():
     install_sublime_text_2()
@@ -37,6 +40,7 @@ def install_sublime_text_2():
         local('sudo rm /usr/local/bin/sublime_text')
     local('sudo ln -s /opt/sublime-text-2/build/sublime_text /usr/local/bin/sublime_text')
 
+
 def install_python_packages():
     if not os.path.exists('bin/igor'):
         local('bin/pip install mr.igor')
@@ -49,6 +53,7 @@ def install_sublime_text_plugins():
         install_plugin(plugin_repo)
     install_pdb_sublime_text_support()
 
+
 def install_plugin(plugin_git_repo):
     git_repo_id = plugin_git_repo.split("/")[-1:][0][:-4]
     plugin_dir = plugins_dir + "/" + git_repo_id
@@ -60,6 +65,7 @@ def install_plugin(plugin_git_repo):
         with lcd(plugins_dir):
             local('git clone %s' % plugin_git_repo)
 
+
 def install_pdb_sublime_text_support():
     local('bin/pip install --upgrade PdbSublimeTextSupport')
     if not os.path.exists('/usr/local/bin/subl'):
@@ -68,6 +74,7 @@ def install_pdb_sublime_text_support():
         local('cp .pdbrc ~/')
     if not os.path.exists('/usr/local/bin/subl'):
         local('cp subl /usr/local/bin/')
+
 
 def install_python_checkers():
     # Pep8
@@ -85,6 +92,7 @@ def install_python_checkers():
     if os.path.exists('%s/sublimetext_python_checker/local_settings.py' % plugins_dir):
         local('rm %s/sublimetext_python_checker/local_settings.py' % plugins_dir)
     local('cp templates/local_settings.py %s/sublimetext_python_checker' % plugins_dir)
+
 
 def install_patterns():
     if os.path.exists('SublimeTextMisc'):
