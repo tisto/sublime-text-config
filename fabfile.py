@@ -16,8 +16,10 @@ plugins = [
     'git://github.com/eduardolundgren/Sublime-JSLint.git',
     # Git
     'git://github.com/kemayo/sublime-text-2-git.git',
-    # LESS
+    # LESS Compiler
     'git@github.com:tisto/sublime-text-less.git',
+    # LESS Syntax Highlighting
+    'https://github.com/appden/less.tmbundle.git',
 ]
 
 
