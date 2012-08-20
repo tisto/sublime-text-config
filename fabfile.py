@@ -2,8 +2,6 @@
 import os
 from fabric.api import local, lcd
 
-sublime_version = "2181"
-install_dir = '/opt/sublime-text-2'
 plugins_dir = '~/.config/sublime-text-2/Packages'
 plugins = [
     # Python PEP-8 and PyFlakes Checker
@@ -33,14 +31,9 @@ def install():
 
 
 def install_sublime_text_2():
-    if not os.path.exists('build'):
-        local('wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202%20Build%202181.tar.bz2')
-        local('tar xfvj Sublime\ Text\ 2\ Build\ %s.tar.bz2' % sublime_version)
-        local('rm Sublime\ Text\ 2\ Build\ %s.tar.bz2' % sublime_version)
-        local('mv Sublime\ Text\ 2 build')
-    if os.path.exists('/usr/local/bin/sublime_text'):
-        local('sudo rm /usr/local/bin/sublime_text')
-    local('sudo ln -s /opt/sublime-text-2/build/sublime_text /usr/local/bin/sublime_text')
+    local("sudo add-apt-repository ppa:webupd8team/sublime-text-2")
+    local("sudo apt-get update")
+    local("sudo apt-get install sublime-text")
 
 
 def install_python_packages():
