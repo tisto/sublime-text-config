@@ -1,0 +1,24 @@
+[
+
+    { "keys": ["ctrl+shift+t"], "command": "delete_trailing_spaces" },
+
+    { "keys": ["ctrl+shift+c"], "command": "git_commit"},
+    { "keys": ["ctrl+shift+a"], "command": "git_add"},
+    { "keys": ["ctrl+shitf+t"], "command": "git_reset"},
+    { "keys": ["ctrl+shitf+r"], "command": "git_rm"},
+    { "keys": ["ctrl+shift+d"], "command": "git_diff"},
+    { "keys": ["ctrl+shift+s"], "command": "git_status"},
+    { "keys": ["ctrl+shift+l"], "command": "git_log"},
+    { "keys": ["ctrl+shift+b"], "command": "git_blame"},
+
+    { "keys": ["ctrl+shift+i"], "command": "igor_replace",
+        "context":[ { "key": "selector", "operator": "equal", "operand": "source.python" } ]
+    },
+
+    { "keys": ["ctrl+shift+j"], "command": "jslint", "args": { "log_level": "shortlog" }},
+
+    { "keys": ["ctrl+shift+alt+j"], "command": "jslint", "args": { "log_level": "all" } },
+
+    { "keys": ["ctrl+shift+y"], "command": "refresh_folder_list" , "args":{"paths":[], "type":"testing"}}
+
+]
