@@ -22,6 +22,10 @@ Theme::
 Sublime Linter (ST 3 Compat)::
 
   git clone https://github.com/gfreezy/SublimeLinter.git
+  cd SublimeLinter
+  git checkout sublime-text-3
+  
+  (https://github.com/SublimeLinter/SublimeLinter3)
 
 Mr Igor::
 
