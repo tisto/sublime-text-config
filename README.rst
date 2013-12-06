@@ -48,3 +48,7 @@ Mr Igor::
 
   git clone https://github.com/optilude/SublimeTextIgorPlugin.git
 
+VCS Gutter:
+
+git clone git://github.com/bradsokol/VcsGutter.git "VCS Gutter"
+
