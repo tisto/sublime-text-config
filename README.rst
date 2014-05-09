@@ -1,10 +1,14 @@
 Sublime Text 3 Configuration
 ============================
 
+Download
+--------
+
+
 Install Package Control
 -----------------------
 
-View -> Show Console
+Menu: View -> Show Console
 
 Paster into console::
 
@@ -15,7 +19,19 @@ See https://sublime.wbond.net/installation
 Plugins
 -------
 
-SublimeGit: https://sublimegit.net/#installation
+Strg+Shift+P:
+
+  * Anaconda
+  * AngularJS
+  * JSHint Gutter
+  * Theme Soda
+  * SublimeGit
+  * SideBarEnhancements
+  * Robot Framework Assistant
+  * VCS Gutter
+
+LESS
+LESS-Build
 
 
 Install Configuration
@@ -32,23 +48,6 @@ Directory::
 
   cd ~/.config/sublime-text-3/Packages
 
-Theme::
-
-  git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
-
-Sublime Linter (ST 3 Compat)::
-
-  git clone https://github.com/gfreezy/SublimeLinter.git
-  cd SublimeLinter
-  git checkout sublime-text-3
-  
-  (https://github.com/SublimeLinter/SublimeLinter3)
-
-Mr Igor::
-
   git clone https://github.com/optilude/SublimeTextIgorPlugin.git
 
-VCS Gutter:
-
-git clone git://github.com/bradsokol/VcsGutter.git "VCS Gutter"
 
