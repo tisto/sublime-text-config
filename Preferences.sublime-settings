@@ -1,35 +1,27 @@
-// Settings in here override those in "Default/Preferences.sublime-settings",
-// and are overridden in turn by file type specific settings.
 {
-
-    // Theme
-    "theme": "Soda Dark 3.sublime-theme",
-	"font_face": "Source Code Pro",
-	"font_size": 16.0,
+    "defaultLineEnding": "unix",
+    "default_line_ending": "unix",
+    "ensure_newline_at_eof_on_save": true,
+    "fallback_encoding": "UTF-8",
+    "font_face": "Source Code Pro",
+    "font_size": 15.0,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "rulers":
+    [
+        79
+    ],
     "soda_classic_tabs": true,
-
-    // Python
-	"translate_tabs_to_spaces": true,
     "tab_size": 4,
-
-    // Unix
-	"defaultLineEnding": "unix",
-	"default_line_ending": "unix",
-	"fallback_encoding": "UTF-8",
-
-    // White Space
+    "theme": "Soda Dark 3.sublime-theme",
+    "translate_tabs_to_spaces": true,
     "trim_automatic_white_space": true,
     "trim_trailing_white_space_on_save": true,
-    "ensure_newline_at_eof_on_save": true,
-
-    // 79 Char Limit
     "wrap_width": 79,
-    "rulers": [79],
-
-    // Ignores
     "file_exclude_patterns":
     [
-        "*.json",
         "*.pyc",
         "*.pyo",
         "*.exe",
@@ -131,5 +123,4 @@
         "zLOG",
         "zdaemon"
     ]
-
 }
