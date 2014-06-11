@@ -29,6 +29,7 @@ Strg+Shift+P:
   * SideBarEnhancements
   * Robot Framework Assistant
   * VCS Gutter
+  * MrIgor
 
 LESS
 LESS-Build
