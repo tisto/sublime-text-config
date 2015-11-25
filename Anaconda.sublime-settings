@@ -1,0 +1,5 @@
+{
+    "mccabe_threshold": 12,
+    "anaconda_gutter_marks": true,
+    "anaconda_linter_show_errors_on_save": true,
+}
