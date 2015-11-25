@@ -7,6 +7,12 @@ Download
 Download and install Sublime Text 3.
 
 
+Install Source Code Pro
+-----------------------
+
+Download and install Source Code Pro.
+
+
 Install Package Control
 -----------------------
 
