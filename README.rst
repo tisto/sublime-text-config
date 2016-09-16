@@ -12,6 +12,8 @@ Install Source Code Pro
 
 Download and install Source Code Pro.
 
+https://github.com/adobe-fonts/source-code-pro/releases
+
 
 Install Package Control
 -----------------------
@@ -29,16 +31,27 @@ Plugins
 
 Strg+Shift+P -> "Install package":
 
-  * Anaconda
+JavaScript:
+
+  * Sublime-Linter
+  * Sublime-linter-contrib-eslint
   * AngularJS
-  * JSHint Gutter
+
+Python:
+
+  * Anaconda
+  * MrIgor
+
+Theme:
+
   * Theme Soda
+
+Misc:
+
   * SublimeGit
   * SideBarEnhancements
   * Robot Framework Assistant
   * VCS Gutter
-  * MrIgor
-
 
 Install Configuration
 ---------------------
