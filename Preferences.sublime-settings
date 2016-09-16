@@ -58,6 +58,7 @@
         "bin",
         "build",
         "develop-eggs",
+        "node_modules",
         "parts",
         "var",
         ".git",
